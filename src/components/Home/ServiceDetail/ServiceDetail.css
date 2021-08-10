@@ -1,0 +1,18 @@
+.service-card:hover{
+    background-image: url(../../../images/servicebg.jpg);
+    position: relative;
+    background-size: cover;
+    color: white;
+    border-radius: 5px;
+}
+.booking-link{
+   color: black;
+    text-decoration: none;
+}
+.booking-link:hover {
+    position: relative;
+    background-size: cover;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+} 

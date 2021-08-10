@@ -1,0 +1,33 @@
+.info-card{
+    margin-top: 50px;
+    padding: 0 5px;
+}
+.info-primary{
+    background-image: url('../../../images/bg1.jpg');
+    position:relative;
+    background-size: cover;
+}
+.info-dark{
+    background-image: url('../../../images/bg2.jpg');
+    position:relative;
+    background-size: cover;
+}
+.info-tertiary{
+    background-image: url('../../../images/bg3.jpg');
+    position:relative;
+    background-size: cover;
+}
+.info-dark{
+    background-color:#3A4256;
+}
+.info-container{
+    height: 100px;
+    padding:30px;
+    border-radius: 5px;
+}
+.info-container:hover{
+    transform: translate(0px, -10px);    
+}
+.info-icon{
+    font-size: 3em;
+}
