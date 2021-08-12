@@ -8,13 +8,9 @@ const containerStyle = {
 
 const Dashboard = () => {   
     return (
-        <section>
-            <div style={containerStyle} className="container-fluid row">
-                <div className="col-md-2">
+        
                     <Sidebar></Sidebar>
-                </div>
-            </div>
-        </section>
+               
     );
 };
 

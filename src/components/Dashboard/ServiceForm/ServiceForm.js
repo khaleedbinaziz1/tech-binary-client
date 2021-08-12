@@ -41,16 +41,16 @@ const ServiceForm = () => {
             <div className="col-md-3">
                 <Sidebar />
             </div>
-            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', right: '0' }} className="col-md-7 text-left pt-5 mt-5">
+            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', right: '0', marginLeft:'80px' }} className="col-md-7 text-left pt-5 mt-5">
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
                         <small> Service Name</small>
-                        <input onBlur={handleBlur} type="text" class="form-control" placeholder="Enter Your Name" name="name"></input>
+                        <input onBlur={handleBlur} type="text" class="form-control" placeholder="Service Name" name="name"></input>
                     </div>
                     
                     <div class="form-group">
                         <small>Service Details</small>
-                        <textarea onBlur={handleBlur} name="details" className="form-control" id="" cols="10" rows="4" placeholder="Give Us A Review"></textarea>
+                        <textarea onBlur={handleBlur} name="details" className="form-control" id="" cols="10" rows="4" placeholder="Service Details"></textarea>
                     </div>
                     <div class="form-group">
                         <small>Put A Service Logo</small>

@@ -12,7 +12,6 @@ import Home from "./components/Home/Home/Home"
 import BookingForm from './components/Dashboard/BookingForm/BookingForm';
 import ReviewForm from './components/Dashboard/Review/ReviewFrom';
 import ServiceForm from './components/Dashboard/ServiceForm/ServiceForm';
-import OrderList from './components/Dashboard/OrderList/OrderList';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -43,15 +42,12 @@ function App() {
           <PrivateRoute path="/review">
             <ReviewForm />
           </PrivateRoute>
-          <Route path="/addService">
+          <PrivateRoute path="/addService">
             <ServiceForm />
-          </Route>
-          <Route path="/orderLists">
-            <OrderList />
-          </Route>
-          <Route path="/addAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/addAdmin">
             <MakeAdmin />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

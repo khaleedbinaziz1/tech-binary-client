@@ -25,10 +25,10 @@ const BookingForm = () => {
 
     return (
         <div className="container-fluid row" >
-            <div className="col-md-3">
+            <div className="col-md-2">
                 <Sidebar />
             </div>
-            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', right: '0' }} className="col-md-7 text-center pt-5 mt-5">
+            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', marginLeft:'80px'}} className="col-md-7 text-center pt-5 mt-5">
                 <h1></h1>
                 <form className="text-left" onSubmit={handleSubmit(onSubmit)}>
                     <small>Select A Service</small>
