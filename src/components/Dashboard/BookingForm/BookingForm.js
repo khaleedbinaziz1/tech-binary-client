@@ -55,6 +55,7 @@ const BookingForm = () => {
                     <br />
                     <input className="btn btn-primary submit-btn" type="submit" />
                 </form>
+            <a href="https://peaceful-hamlet-50331.herokuapp.com/ssl-request">click to pay</a>
             </div>
         </div>
 
