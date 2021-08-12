@@ -1,9 +1,9 @@
 import React from 'react';
 const Review = ({ review }) => {
     return (
-        <div className="col-md-4 col-sm-6 text-center">
+        <div className="col-md-4 text-center">
 
-            <div className="card justify-content-center" style={{ width: '18rem' }}>
+            <div className="card justify-content-center" >
                 {
                     review.image? <img src={`data:image/png;base64,${review.image.img}`} className="card-img-top " style={{ height: '60px', width: '60px', borderRadius: '50%', alignSelf: 'center' }} className="img-fluid m-3" alt="" />
                     :

@@ -12,7 +12,7 @@ const Services = () => {
     }, [])
 
     return (
-        <section className="services-container mt-5">
+        <section className="services-container mt-5 ">
             <div className="text-center">
                 <h5 style={{ color: '#7141B1' }}>OUR SERVICES</h5>
                 <h2>We Offer a Wide <br />
