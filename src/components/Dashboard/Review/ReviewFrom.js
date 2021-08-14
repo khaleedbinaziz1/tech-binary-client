@@ -44,7 +44,7 @@ const ReviewForm = () => {
             <div className="col-md-3">
                 <Sidebar />
             </div>
-            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', right: '0',  marginLeft:'80px' }} className="col-md-7 text-left pt-5 mt-5">
+            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', right: '0',  marginLeft:'60px' }} className="col-md-7 text-left pt-5 mt-5">
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
                         <small>Name</small>

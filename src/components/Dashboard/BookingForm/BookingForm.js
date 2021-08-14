@@ -28,7 +28,7 @@ const BookingForm = () => {
             <div className="col-md-2">
                 <Sidebar />
             </div>
-            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', marginLeft:'80px'}} className="col-md-7 text-center pt-5 mt-5">
+            <div style={{ backgroundColor: '#e9e1ef', borderRadius: '5px', marginLeft:'60px'}} className="col-md-7 text-center pt-5 mt-5">
                 <h1></h1>
                 <form className="text-left" onSubmit={handleSubmit(onSubmit)}>
                     <small>Select A Service</small>
@@ -55,7 +55,7 @@ const BookingForm = () => {
                     <br />
                     <input className="btn btn-primary submit-btn" type="submit" />
                 </form>
-            <a href="https://peaceful-hamlet-50331.herokuapp.com/ssl-request">click to pay</a>
+            <a className="pay-link" href="https://peaceful-hamlet-50331.herokuapp.com/ssl-request">click to pay</a>
             </div>
         </div>
 

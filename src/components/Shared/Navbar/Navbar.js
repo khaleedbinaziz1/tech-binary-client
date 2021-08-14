@@ -1,41 +1,108 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo  from '../../../images/logo.jpg'
-import './Navbar.css'
+import React , {useEffect} from 'react'
+import './Navbar.css';
+import { NavLink } from 'react-router-dom';
+import $ from 'jquery';
+import logo from '../../../images/logo.jpg';
 
 const Navbar = () => {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light navbar-bg">
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <div className="logo">
-                <Link to="/">
-                    <img src={logo} alt="" />
-                </Link>
-                </div>
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <Link className="nav-link mr-5 text-white" to="/">Home <span className="sr-only">(current)</span></Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link mr-5 text-white" to="">About Us</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link mr-5 text-white" to="/booking">Tech Services</Link>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="#">Projects</a>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link mr-5 text-white" to="/dashboard">Dashboard</Link>
-                    </li>
-                </ul>
+  function animation(){
+    var tabsNewAnim = $('#navbarSupportedContent');
+    var activeItemNewAnim = tabsNewAnim.find('.active');
+    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+    var itemPosNewAnimTop = activeItemNewAnim.position();
+    var itemPosNewAnimLeft = activeItemNewAnim.position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+    $("#navbarSupportedContent").on("click","li",function(e){
+      $('#navbarSupportedContent ul li').removeClass("active");
+      $(this).addClass('active');
+      var activeWidthNewAnimHeight = $(this).innerHeight();
+      var activeWidthNewAnimWidth = $(this).innerWidth();
+      var itemPosNewAnimTop = $(this).position();
+      var itemPosNewAnimLeft = $(this).position();
+      $(".hori-selector").css({
+        "top":itemPosNewAnimTop.top + "px", 
+        "left":itemPosNewAnimLeft.left + "px",
+        "height": activeWidthNewAnimHeight + "px",
+        "width": activeWidthNewAnimWidth + "px"
+      });
+    });
+  }
+
+  useEffect(() => {
+    
+    animation();
+    $(window).on('resize', function(){
+      setTimeout(function(){ animation(); }, 500);
+    });
+    
+  }, []);
+
+  return (
+  <nav className="navbar navbar-expand-lg navbar-mainbg">
+    
+      <NavLink className="navbar-brand navbar-logo" to="/" exact>
+        <img style={{height: '40px' }} src={logo} alt="" />
+      </NavLink>
+    
+    
+      <button 
+        className="navbar-toggler"
+        onClick={ function(){
+          setTimeout(function(){ animation(); });
+        }}
+        type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+      <div 
+        className="collapsed navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav ml-auto">
+            
+            <div className="hori-selector">
+              <div className="left"></div>
+              <div className="right"></div>
             </div>
-        </nav>
-    );
-};
+            
+            <li className="nav-item active">
+              <NavLink className="nav-link" to="/" exact>
+                <i 
+                className="bx bx-home nav__icon">
+                </i>Home
+              </NavLink>
+            </li>
 
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/aboutUs" exact>
+                <i 
+                className="bx bx-book nav__icon">
+                </i>About
+              </NavLink> 
+            </li>
+
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/booking" exact>
+                <i 
+                className="bx bx-plus nav__icon">
+                </i>Services
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/contact" exact>
+                <i 
+                className="bx bx-phone nav__icon">
+                </i>Contact Us
+              </NavLink>
+            </li>
+        </ul>
+      </div>
+  </nav>
+  )
+}
 export default Navbar;

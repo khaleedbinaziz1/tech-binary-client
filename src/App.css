@@ -5,6 +5,12 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+html,body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +16,8 @@ import ServiceForm from './components/Dashboard/ServiceForm/ServiceForm';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ContactUs from './components/ContactUs/ContactUs';
+import AboutUs from './components/AboutUs/AboutUs';
 
 export const UserContext = createContext();
 
@@ -29,6 +32,12 @@ function App() {
           </Route>
           <Route path="/booking">
             <Booking />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs />
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard />

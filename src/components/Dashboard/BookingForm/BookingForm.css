@@ -8,3 +8,9 @@
 .submit-btn{
     margin-top: 20px;
 }
+.pay-link{
+    color: black;
+    background-color:orange;
+    padding: 10px;
+    border-radius: 5px;
+}
